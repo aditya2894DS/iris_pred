@@ -15,7 +15,7 @@ def form(request):
     # getting model file path
     model_path = os.path.join(settings.BASE_DIR, 'iris_pred/pkl/iris_predict.pkl')
     encoder_path = os.path.join(settings.BASE_DIR, 'iris_pred/pkl/iris_encoder.pkl')
-    print(model_path)
+    
     # loading the model
     loaded_model = pickle.load(open(model_path, 'rb'))
     loaded_encoder = pickle.load(open(encoder_path, 'rb'))
