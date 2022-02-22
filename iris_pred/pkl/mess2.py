@@ -1,0 +1,1 @@
+msg2 = 'This is a text'
