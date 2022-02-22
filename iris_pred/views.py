@@ -3,8 +3,6 @@ from django.shortcuts import render
 from django.conf import settings
 import os
 
-from sklearn.datasets import load_diabetes 
-
 # Create your views here.
 def index(request):
   return render(request, 'iris_pred/index.html', {})
@@ -15,7 +13,7 @@ def form(request):
     # getting model file path
     model_path = os.path.join(settings.BASE_DIR, 'iris_pred/pkl/iris_predict.pkl')
     encoder_path = os.path.join(settings.BASE_DIR, 'iris_pred/pkl/iris_encoder.pkl')
-    
+
     # loading the model
     loaded_model = pickle.load(open(model_path, 'rb'))
     loaded_encoder = pickle.load(open(encoder_path, 'rb'))
